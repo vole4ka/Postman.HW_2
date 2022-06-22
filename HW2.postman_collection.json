@@ -1,56 +1,39 @@
-{
-	"info": {
+{"info": {
 		"_postman_id": "52d792c9-2b8c-45b6-a8e4-26c32d21071c",
 		"name": "HW2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "19799278"
 	},
 	"item": [
-		{
-			"name": "/first",
+		{"name": "/first",
 			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
+				{"listen": "test",
+				"script": {"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"pm.test(\"correct string\", function () {\r",
 							"    pm.expect(pm.response.text()).to.include(\"This is the first responce from server!\");\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
+							"});"],
+						"type": "text/javascript"}}],
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/first",
-					"protocol": "http",
-					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
-					],
+				"raw": "http://162.55.220.72:5005/first",
+				"protocol": "http",
+				"host": ["162",
+					"55",
+					"220",
+					"72"],
 					"port": "5005",
-					"path": [
-						"first"
-					]
-				}
+					"path": ["first"]}
 			},
-			"response": []
-		},
+			"response": []},
 		{
 			"name": "/user_info_3",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
+			"event": [{"listen": "test",
+				   "script": {"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
@@ -97,19 +80,14 @@
 							"    pm.expect (resPytka.family.u_salary_1_5_year).to.eql(req_salary * 4)\r",
 							"})\r",
 							"\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
+							""],
+						"type": "text/javascript"}}],
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "formdata",
-					"formdata": [
-						{
+					"formdata": [{
 							"key": "name",
 							"value": "olia",
 							"type": "text"
@@ -122,51 +100,32 @@
 						{
 							"key": "salary",
 							"value": "400",
-							"type": "text"
-						}
-					]
-				},
+							"type": "text"}]},
 				"url": {
 					"raw": "http://162.55.220.72:5005/user_info_3",
 					"protocol": "http",
-					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+					"host": ["162",
+						 "55",
+						 "220",
+						 "72"
 					],
 					"port": "5005",
-					"path": [
-						"user_info_3"
-					]
-				}
-			},
+					"path": ["user_info_3"]}},
 			"response": [{
 				"age": "32",
 				"family": {
 					"children": [
-						[
-							"Alex",
-							24
-						],
-						[
-							"Kate",
-							12
-						]
-					],
-					"u_salary_1_5_year": 1600
-				},
+						["Alex",
+						  24],
+						["Kate",
+						 12]],
+					"u_salary_1_5_year": 1600},
 				"name": "olia",
-				"salary": 400
-			}]
-		},
+				"salary": 400}]},
 		{
 			"name": "/object_info_3",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
+			"event": [{"listen": "test",
+				   "script": {"exec": [
 							"//http://162.55.220.72:5005/object_info_3\r",
 							"//1. Отправить запрос.\r",
 							"//2. Статус код 200\r",
@@ -217,12 +176,8 @@
 							"//11. Проверить, что параметр age имеет значение 4.\r",
 							"pm.test(\"test_dog_age\", function (){\r",
 							"    pm.expect (resPytka.family.pets.dog.age).to.eql(4);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
+							"});"],
+						"type": "text/javascript"}}],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -240,34 +195,22 @@
 						"object_info_3"
 					],
 					"query": [
-						{
-							"key": "name",
-							"value": "olia"
+						{"key": "name",
+						 "value": "olia"
 						},
-						{
-							"key": "age",
-							"value": "32"
+						{"key": "age",
+						 "value": "32"
 						},
-						{
-							"key": "salary",
-							"value": "500"
-						}
-					]
-				}
-			},
+						{"key": "salary",
+						 "value": "500"}]}},
 			"response": [{
 				"age": "32",
 				"family": {
 					"children": [
-						[
-							"Alex",
-							24
-						],
-						[
-							"Kate",
-							12
-						]
-					],
+						[ "Alex",
+						  24 ],
+						[ "Kate",
+						  12 ]],
 					"pets": {
 						"cat": {
 							"age": 3,
@@ -275,19 +218,14 @@
 						},
 						"dog": {
 							"age": 4,
-							"name": "Luky"
-						}
-					},
+							"name": "Luky"}},
 					"u_salary_1_5_year": 2000
 				},
 				"name": "olia",
-				"salary": 500
-			}]
-		},
+				"salary": 500}]},
 		{
 			"name": "/object_info_4",
-			"event": [
-				{
+			"event": [{
 					"listen": "test",
 					"script": {
 						"exec": [
@@ -339,12 +277,8 @@
 							"\r",
 							"for(let key in resChoto.salary){\r",
 							"    console.log(resChoto.salary[key])\r",
-							"}"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
+							"}"],
+						"type": "text/javascript"}}],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -359,40 +293,25 @@
 					],
 					"port": "5005",
 					"path": [
-						"object_info_4"
-					],
+						"object_info_4"],
 					"query": [
-						{
-							"key": "name",
-							"value": "olia"
-						},
-						{
-							"key": "age",
-							"value": "32"
-						},
-						{
-							"key": "salary",
-							"value": "500"
-						}
-					]
-				}
-			},
+						{ "key": "name",
+					 	  "value": "olia" },
+						{ "key": "age",
+						  "value": "32"},
+						{ "key": "salary",
+						  "value": "500"}]}},
 			"response": [{
 				"age": 32,
 				"name": "olia",
 				"salary": [
 					500,
 					"1000",
-					"1500"
-				]
-			}]
-		},
+					"1500" ]}]},
 		{
 			"name": "/user_info_2",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
+			"event": [{"listen": "test",
+				   "script": {
 						"exec": [
 							"//http://162.55.220.72:5005/user_info_2\r",
 							"//1. Отправить запрос.\r",
@@ -488,35 +407,25 @@
 							"for (let key2 in respFin.person){\r",
 							"    console.log(key2)\r",
 							"}\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
+							""],
+						"type": "text/javascript"}}],
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "formdata",
 					"formdata": [
-						{
-							"key": "salary",
-							"value": "{{salary}}",
-							"type": "text"
+						{ "key": "salary",
+						  "value": "{{salary}}",
+						  "type": "text"
 						},
-						{
-							"key": "age",
-							"value": "{{age}}",
-							"type": "text"
+						{"key": "age",
+						 "value": "{{age}}",
+						 "type": "text"
 						},
-						{
-							"key": "name",
-							"value": "{{name}}",
-							"type": "text"
-						}
-					]
-				},
+						{ "key": "name",
+						  "value": "{{name}}",
+						  "type": "text"}]},
 				"url": {
 					"raw": "http://162.55.220.72:5005/user_info_2",
 					"protocol": "http",
@@ -528,10 +437,7 @@
 					],
 					"port": "5005",
 					"path": [
-						"user_info_2"
-					]
-				}
-			},
+						"user_info_2" ]}},
 			"response": [{
 				"person": {
 					"u_age": 32,
